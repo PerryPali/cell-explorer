@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b171d" />
+    <title>一个细胞，一座生命工厂。</title>
+    <link rel="stylesheet" href="spatial.css" />
+    <link rel="stylesheet" href="factory-intro.css" />
+    <script src="vendor/three.min.js" defer></script>
+    <script src="cell-data.js" defer></script>
+    <script src="organelle-models.js" defer></script>
+    <script src="factory-intro.js" defer></script>
+    <script src="spatial.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <a class="brand" href="index.html"
+        ><span class="brand-orbit"></span>CELL FACTORY <small>细胞工厂</small></a
+      >
+      <nav>
+        <a href="index.html">细胞全景</a><a href="index.html#structures">结构索引</a
+        ><span class="edition">SPATIAL EXPLORER / 06</span>
+      </nav>
+    </header>
+    <main>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">A LITTLE WORLD. AN ENTIRE FACTORY.</p>
+          <h1>一个细胞，<span>一座生命工厂。</span></h1>
+        </div>
+        <p class="intro-note">
+          探索细胞器的分工，看见生命如何协同运转。<br />拖动查看全貌，点击细胞器深入探索。
+        </p>
+      </section>
+      <div class="stage" id="cell-scene">
+        <div class="stage-tag">
+          <span class="live-dot"></span> LIVE 3D <span class="stage-sub">/ 立体结构探索</span>
+        </div>
+        <noscript
+          ><p class="fallback">
+            请开启 JavaScript 查看三维模型。也可通过页面中的结构索引继续阅读。
+          </p></noscript
+        >
+        <div class="canvas-host" aria-label="可拖动旋转的三维细胞模型"></div>
+        <div class="labels"></div>
+        <div class="stage-status" aria-live="polite">正在构建细胞模型…</div>
+        <div class="stage-bottom">
+          <span class="gesture">拖动旋转 · 滚轮缩放 · 点击探索</span>
+          <div class="controls">
+            <button id="rotate-toggle" aria-pressed="false">自动旋转</button
+            ><button id="reset-view">重置视角</button><button id="intro-replay">重播开场</button>
+          </div>
+        </div>
+        <div class="fallback" hidden>
+          <h2>当前浏览器未能开启 3D</h2>
+          <p>请使用支持 WebGL 的浏览器，或通过下方结构索引继续阅读。</p>
+        </div>
+      </div>
+      <section id="structures" class="structures">
+        <div class="section-heading">
+          <span>06 STRUCTURES / 六个探索入口</span><span>从整体，到每一部分</span>
+        </div>
+        <div class="structure-grid">
+          <a
+            class="structure-card"
+            href="organelles/nucleus.html"
+            data-id="nucleus"
+            style="--accent: #d4a5ff"
+            ><span class="card-no">01</span
+            ><span class="card-name">细胞核<small>遗传信息的档案馆</small></span
+            ><span class="card-arrow">↗</span></a
+          ><a
+            class="structure-card"
+            href="organelles/mitochondrion.html"
+            data-id="mitochondrion"
+            style="--accent: #ffb16b"
+            ><span class="card-no">02</span
+            ><span class="card-name">线粒体<small>能量转换站</small></span
+            ><span class="card-arrow">↗</span></a
+          ><a
+            class="structure-card"
+            href="organelles/er.html"
+            data-id="er"
+            style="--accent: #a8a4ff"
+            ><span class="card-no">03</span
+            ><span class="card-name">粗面内质网<small>蛋白质加工车间</small></span
+            ><span class="card-arrow">↗</span></a
+          ><a
+            class="structure-card"
+            href="organelles/golgi.html"
+            data-id="golgi"
+            style="--accent: #79e2c3"
+            ><span class="card-no">04</span
+            ><span class="card-name">高尔基体<small>加工与分发中心</small></span
+            ><span class="card-arrow">↗</span></a
+          ><a
+            class="structure-card"
+            href="organelles/lysosome.html"
+            data-id="lysosome"
+            style="--accent: #f3d280"
+            ><span class="card-no">05</span
+            ><span class="card-name">溶酶体<small>分解与回收车间</small></span
+            ><span class="card-arrow">↗</span></a
+          ><a
+            class="structure-card"
+            href="organelles/ribosome.html"
+            data-id="ribosome"
+            style="--accent: #85c8ff"
+            ><span class="card-no">06</span
+            ><span class="card-name">核糖体<small>蛋白质装配台</small></span
+            ><span class="card-arrow">↗</span></a
+          >
+        </div>
+      </section>
+    </main>
+    <footer>
+      <span>CELL FACTORY · 学习作品</span><span>动物细胞结构示意 · 颜色、比例与布局经过简化</span>
+    </footer>
+  </body>
+</html>

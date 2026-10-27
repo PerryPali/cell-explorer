@@ -1,0 +1,220 @@
+/* 开场覆盖层只用于首页；细胞和工厂始终在同一个 WebGL 画布中。 */
+.stage.factory-opening {
+  position: fixed;
+  z-index: 100;
+  margin: 0;
+  max-width: none;
+  border-color: transparent;
+}
+.factory-opening .stage-tag,
+.factory-opening .stage-bottom,
+.factory-opening .labels,
+.factory-opening .stage-status {
+  opacity: 0;
+  pointer-events: none;
+}
+.factory-opening .canvas-host {
+  pointer-events: none;
+}
+.factory-intro {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+}
+.factory-intro-top {
+  position: absolute;
+  top: 30px;
+  left: 5%;
+  right: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.factory-intro-top small {
+  display: block;
+  color: #91aaa9;
+  font-size: 9px;
+  letter-spacing: 3px;
+  margin-top: 8px;
+}
+#intro-skip {
+  pointer-events: auto;
+  border: 1px solid #9abcb44a;
+  background: #10252ccc;
+  color: #d4e5df;
+  border-radius: 30px;
+  padding: 11px 19px;
+  font-size: 12px;
+}
+#intro-skip:hover {
+  background: #2a4448;
+}
+.factory-intro-copy {
+  position: absolute;
+  top: 10%;
+  left: 4%;
+  right: 4%;
+  text-align: center;
+}
+.factory-intro:before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto;
+  height: 36%;
+  background: linear-gradient(#0b171d99, #0b171d33 65%, transparent);
+}
+.factory-kicker {
+  font-size: 11px;
+  letter-spacing: 2.5px;
+  color: #c7ec97;
+  margin: 0 0 14px;
+}
+.factory-intro h2 {
+  font-size: clamp(32px, 4.3vw, 64px);
+  line-height: 1.35;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #fff9ed;
+  margin: 0;
+  text-shadow: 0 3px 24px #08141b;
+}
+.factory-intro h2 span {
+  color: #d3efa6;
+}
+.factory-caption {
+  font-size: 15px;
+  color: #c8d9d3;
+  line-height: 1.8;
+  margin-top: 16px;
+}
+.factory-mapping {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  padding: 10px 16px;
+  border: 1px solid var(--mapping-color, #c7ec97);
+  border-radius: 24px;
+  background: #0b1c25ed;
+  color: #f3f7ed;
+  box-shadow: 0 5px 24px #0005;
+  font-size: 14px;
+  white-space: nowrap;
+}
+.intro h1 {
+  font-size: clamp(32px, 3.6vw, 56px);
+  letter-spacing: -0.04em;
+}
+.intro h1 span {
+  display: inline-block;
+}
+.intro {
+  gap: 28px;
+}
+.intro-note {
+  flex-shrink: 0;
+}
+.factory-intro-foot {
+  position: absolute;
+  bottom: 34px;
+  left: 7%;
+  right: 7%;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  color: #9eb8b5;
+  font-size: 10px;
+  letter-spacing: 1.5px;
+}
+.intro-timeline {
+  flex: 1;
+  height: 1px;
+  background: #9abcb42b;
+  max-width: 250px;
+}
+.intro-timeline i {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #c7ec97;
+  transform-origin: left;
+}
+.intro-ready {
+  margin-left: auto;
+  color: #c7ec97;
+}
+.controls button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+@media (max-width: 650px) {
+  .factory-intro-top {
+    top: 22px;
+  }
+  .factory-intro-top > span {
+    font-size: 10px;
+  }
+  .factory-intro-copy {
+    top: 13%;
+    left: 3%;
+    right: 3%;
+  }
+  .factory-intro h2 {
+    font-size: clamp(23px, 6.6vw, 36px);
+    letter-spacing: 0;
+    line-height: 1.5;
+  }
+  .factory-kicker {
+    font-size: 8px;
+  }
+  .factory-caption {
+    font-size: 12px;
+  }
+  .factory-mapping {
+    font-size: 12px;
+    padding: 9px 12px;
+  }
+  .factory-intro-foot {
+    bottom: 30px;
+    gap: 12px;
+    font-size: 8px;
+  }
+  .intro-ready {
+    display: none;
+  }
+  #intro-skip {
+    font-size: 10px;
+    padding: 10px 14px;
+  }
+  .controls {
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    max-width: 180px;
+  }
+  #intro-replay {
+    font-size: 9px;
+  }
+}
+@media (max-height: 600px) and (min-width: 651px) {
+  .factory-intro-top {
+    top: 15px;
+  }
+  .factory-intro-copy {
+    top: 55px;
+  }
+  .factory-intro h2 {
+    font-size: 28px;
+    line-height: 1.25;
+  }
+  .factory-kicker {
+    margin-bottom: 7px;
+    font-size: 9px;
+  }
+  .factory-caption {
+    display: none;
+  }
+  .factory-intro-foot {
+    bottom: 18px;
+  }
+}

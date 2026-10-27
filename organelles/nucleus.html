@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#0b171d" />
+    <title>细胞核 · 细胞工厂</title>
+    <link rel="stylesheet" href="../spatial.css" />
+    <script src="../vendor/three.min.js" defer></script>
+    <script src="../cell-data.js" defer></script>
+    <script src="../organelle-models.js" defer></script>
+    <script src="../spatial.js" defer></script>
+  </head>
+  <body data-organelle="nucleus" style="--accent: #d4a5ff">
+    <header>
+      <a class="brand" href="../index.html"
+        ><span class="brand-orbit"></span>CELL FACTORY <small>细胞工厂</small></a
+      >
+      <nav>
+        <a href="../index.html">细胞全景</a><a href="../index.html#structures">结构索引</a
+        ><span class="edition">SPATIAL EXPLORER / 06</span>
+      </nav>
+    </header>
+    <main>
+      <a class="back-link" href="../index.html#nucleus">← 返回细胞全景</a>
+      <section class="detail-layout">
+        <div class="stage" id="cell-scene">
+          <div class="stage-tag">
+            <span class="live-dot"></span> LIVE 3D <span class="stage-sub">/ 立体结构探索</span>
+          </div>
+          <noscript
+            ><p class="fallback">
+              请开启 JavaScript 查看三维模型。也可通过页面中的结构索引继续阅读。
+            </p></noscript
+          >
+          <div class="canvas-host" aria-label="可拖动旋转的三维细胞模型"></div>
+          <div class="labels"></div>
+          <div class="stage-status" aria-live="polite">正在构建细胞模型…</div>
+          <div class="stage-bottom">
+            <span class="gesture">拖动旋转 · 滚轮缩放 · 点击探索</span>
+            <div class="controls">
+              <button id="rotate-toggle" aria-pressed="false">自动旋转</button
+              ><button id="reset-view">重置视角</button>
+            </div>
+          </div>
+          <div class="fallback" hidden>
+            <h2>当前浏览器未能开启 3D</h2>
+            <p>请使用支持 WebGL 的浏览器，或通过下方结构索引继续阅读。</p>
+          </div>
+        </div>
+        <div class="detail-copy">
+          <p class="eyebrow">STRUCTURE / 01</p>
+          <h1>细胞核</h1>
+          <p class="role-title">遗传信息的档案馆</p>
+          <p>细胞核由核膜包围，保存染色体中的遗传信息。核孔让特定分子在细胞核与细胞质之间往来。</p>
+          <span class="model-hint">拖动模型，查看它的另一面</span>
+        </div>
+      </section>
+      <section class="articles">
+        <article>
+          <span class="eyebrow">01 / STRUCTURE</span>
+          <h2>它长什么样？</h2>
+          <p>双层核膜包围核内空间，核孔贯穿核膜。剖面展示核仁与不规则染色质；核仁不由膜包围。</p>
+        </article>
+        <article>
+          <span class="eyebrow">02 / FUNCTION</span>
+          <h2>它负责什么？</h2>
+          <p>细胞核中的 DNA 包含许多基因；相关遗传信息可以通过转录生成 RNA。</p>
+        </article>
+        <article>
+          <span class="eyebrow">03 / COLLABORATION</span>
+          <h2>它如何与其他结构协作？</h2>
+          <p>用于蛋白质合成的 mRNA 在经过相应加工后，可通过核孔进入细胞质，由核糖体读取。</p>
+        </article>
+      </section>
+      <aside class="science-note">
+        <span>观察笔记</span>
+        <p>模型切去一部分核膜以展示内部；核膜间隙、核孔和染色质的比例作了教学性放大。</p>
+      </aside>
+      <section class="continue">
+        <span class="eyebrow">继续探索</span><a href="mitochondrion.html">线粒体 ↗</a
+        ><a href="er.html">粗面内质网 ↗</a><a href="golgi.html">高尔基体 ↗</a
+        ><a href="lysosome.html">溶酶体 ↗</a><a href="ribosome.html">核糖体 ↗</a>
+      </section>
+      <div class="reference">
+        内容参考：<a
+          href="https://www.ncbi.nlm.nih.gov/books/NBK9927/"
+          target="_blank"
+          rel="noopener noreferrer"
+          >NCBI Bookshelf ↗</a
+        >
+        <p>程序化结构剖面示意；颜色、数量与比例经过教学简化，非显微重建或原子模型。</p>
+      </div>
+    </main>
+    <footer><a href="../index.html">← 细胞全景</a><span>01 / 06 · NUCLEUS</span></footer>
+  </body>
+</html>
